@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Controle de Produtos</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="layout">
+      <section class="card hero">
+        <div>
+          <p class="eyebrow">Pagina 1</p>
+          <h1>Controle de Produtos</h1>
+          <p class="lead">
+            Adicione itens e ajuste a quantidade rapidamente. A outra pagina
+            atualiza instantaneamente.
+          </p>
+        </div>
+
+        <nav class="nav-links">
+          <a class="nav-link active" href="index.html">Controle</a>
+          <a class="nav-link" href="visualizacao.html" target="_blank" rel="noopener noreferrer">
+            Abrir visualizacao
+          </a>
+        </nav>
+      </section>
+
+      <section class="card form-card">
+        <form id="product-form" class="product-form">
+          <label for="product-name" class="label">Novo produto</label>
+          <div class="form-row">
+            <input
+              id="product-name"
+              name="product-name"
+              type="text"
+              placeholder="Ex.: Coxinha"
+              autocomplete="off"
+              required
+            />
+            <button type="submit">Adicionar</button>
+          </div>
+        </form>
+      </section>
+
+      <section class="card">
+        <div class="section-header">
+          <h2>Lista atual</h2>
+          <button id="clear-all" class="ghost-button" type="button">
+            Limpar tudo
+          </button>
+        </div>
+        <div id="product-list" class="product-list" aria-live="polite"></div>
+      </section>
+    </main>
+
+    <script src="app.js"></script>
+  </body>
+</html>
